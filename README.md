@@ -45,15 +45,12 @@ This architecture allows **remote control without requiring a dedicated web serv
 
 ```mermaid
 graph TD
-    User((Authorized Gmail User)) --> Server[Gmail Server]
-    Server --> Listener[Email Listener]
-    Listener --> Verify{Sender Verification}
-    Verify --> Parser[Command Parser]
-    Parser --> Executor[Command Executor]
-    Executor --> Actions[Windows System Actions]
-    Actions --> Result[Result Generator]
-    Result --> Sender[Email Sender]
-    Sender --> User
+    A[Authorized Gmail Account] -->|Send command email| B[Gmail Server]
+    B -->|Retrieve email| C[Remote Control Application]
+    C -->|Parse command| D[Command Processor]
+    D -->|Execute action| E[Target Computer System]
+    E -->|Execution result| F[Email Response Sender]
+    F -->|Send result email| A
 ```
 ---
 
