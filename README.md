@@ -41,9 +41,8 @@ This architecture allows **remote control without requiring a dedicated web serv
 
 ---
 
-## 🏗️ System Architecture
+# 🏗️ System Architecture
 
-```mermaid
 graph LR
     A[Authorized Gmail User] -->|Send command| B[Gmail Server]
     B --> C[Email Listener]
@@ -80,7 +79,6 @@ Make sure the following tools and libraries are installed before running the pro
 
 ## 1. Clone the repository
 
-```bash
 git clone https://github.com/trongtz/control-pc-by-email.git
 cd control-pc-by-email
 ## 2. Open the project
