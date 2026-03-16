@@ -42,35 +42,35 @@ This architecture allows **remote control without requiring a dedicated web serv
 ---
 
 # 🏗️ System Architecture
+graph TD
+    %% Định nghĩa các khối
+    User1((Authorized Gmail User))
+    Server[Gmail Server]
+    Listener[Email Listener]
+    Verify{Sender Verification}
+    Parser[Command Parser]
+    Executor[Command Executor]
+    Actions[Windows System Actions]
+    Result[Result Generator]
+    Sender[Email Sender]
+    User2((Authorized Gmail User))
 
-Authorized Gmail User
-        │
-        ▼
-   Gmail Server
-        │
-        ▼
-   Email Listener
-        │
-        ▼
-Sender Verification
-        │
-        ▼
-   Command Parser
-        │
-        ▼
-  Command Executor
-        │
-        ▼
-Windows System Actions
-        │
-        ▼
-   Result Generator
-        │
-        ▼
-    Email Sender
-        │
-        ▼
-Authorized Gmail User
+    %% Kết nối các khối
+    User1 --> Server
+    Server --> Listener
+    Listener --> Verify
+    Verify -->|Valid| Parser
+    Parser --> Executor
+    Executor --> Actions
+    Actions --> Result
+    Result --> Sender
+    Sender --> User2
+
+    %% Thêm màu sắc cho đẹp
+    style User1 fill:#f9f,stroke:#333,stroke-width:2px
+    style User2 fill:#f9f,stroke:#333,stroke-width:2px
+    style Verify fill:#fff4dd,stroke:#d4a017,stroke-width:2px
+    style Actions fill:#e1f5fe,stroke:#01579b,stroke-width:2px
 
 ---
 
