@@ -42,39 +42,15 @@ This architecture allows **remote control without requiring a dedicated web serv
 ---
 
 # 🏗️ System Architecture
-Authorized Gmail Account
 
-│
-
-│ Send command
-
-▼
-
-Gmail Server
-
-│
-
-│ Email retrieval
-
-▼
-
-Remote Control Application
-
-│
-
-│ Execute command
-
-▼
-
-Target Computer
-
-│
-
-│ Send result
-
-▼
-
-Gmail Response
+```mermaid
+graph TD
+    A[Authorized Gmail Account] -->|Send command email| B[Gmail Server]
+    B -->|Retrieve email| C[Remote Control Application]
+    C -->|Parse command| D[Command Processor]
+    D -->|Execute action| E[Target Computer System]
+    E -->|Execution result| F[Email Response Sender]
+    F -->|Send result email| A
 
 ---
 
