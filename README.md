@@ -43,19 +43,34 @@ This architecture allows **remote control without requiring a dedicated web serv
 
 # 🏗️ System Architecture
 
-graph TD
-    User((Authorized Gmail User)) --> Server[Gmail Server]
-    Server --> Listener[Email Listener]
-    Listener --> Verify{Sender Verification}
-    Verify --> Parser[Command Parser]
-    Parser --> Executor[Command Executor]
-    Executor --> Actions[Windows System Actions]
-    Actions --> Generator[Result Generator]
-    Generator --> Sender[Email Sender]
-    Sender --> User
-    
-    style User fill:#f9f,stroke:#333,stroke-width:2px
-    style Verify fill:#fff4dd,stroke:#d4a017,stroke-width:2px
+Authorized Gmail User
+        │
+        ▼
+   Gmail Server
+        │
+        ▼
+   Email Listener
+        │
+        ▼
+Sender Verification
+        │
+        ▼
+   Command Parser
+        │
+        ▼
+  Command Executor
+        │
+        ▼
+Windows System Actions
+        │
+        ▼
+   Result Generator
+        │
+        ▼
+    Email Sender
+        │
+        ▼
+Authorized Gmail User
 ---
 
 # 📦 Requirements
