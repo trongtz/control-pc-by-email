@@ -77,31 +77,31 @@ Make sure the following tools and libraries are installed before running the pro
 
 ## 1. Clone the repository
 
-git clone https://github.com/trongtz/control-pc-by-email.git
-cd control-pc-by-email
+- git clone https://github.com/trongtz/control-pc-by-email.git
+- cd control-pc-by-email
 ## 2. Open the project
 
 Open the solution file in Visual Studio.
 
 ## 3. Install required libraries
 
-Make sure the following libraries are properly linked:
+- Make sure the following libraries are properly linked:
 
-OpenCV
+- OpenCV
 
-EASendMail
+- EASendMail
 
-Configure library paths if needed.
+- Configure library paths if needed.
 
 ## 4. Configure Gmail credentials
 
-Update the configuration with:
+- Update the configuration with:
 
-Gmail account
+- Gmail account
 
-App password
+- App password
 
-Authorized sender email
+- Authorized sender email
 
 # 🚀 Usage
 
