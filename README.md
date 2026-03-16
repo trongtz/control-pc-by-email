@@ -71,6 +71,7 @@ Windows System Actions
         │
         ▼
 Authorized Gmail User
+
 ---
 
 # 📦 Requirements
