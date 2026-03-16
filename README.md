@@ -42,33 +42,20 @@ This architecture allows **remote control without requiring a dedicated web serv
 ---
 
 # 🏗️ System Architecture
+
+```mermaid
 graph TD
-    %% Định nghĩa các khối
-    User1((Authorized Gmail User))
-    Server[Gmail Server]
-    Listener[Email Listener]
-    Verify{Sender Verification}
-    Parser[Command Parser]
-    Executor[Command Executor]
-    Actions[Windows System Actions]
-    Result[Result Generator]
-    Sender[Email Sender]
-    User2((Authorized Gmail User))
-
-    %% Kết nối các khối
-    User1 --> Server
-    Server --> Listener
-    Listener --> Verify
-    Verify -->|Valid| Parser
-    Parser --> Executor
-    Executor --> Actions
-    Actions --> Result
-    Result --> Sender
-    Sender --> User2
-
-    %% Thêm màu sắc cho đẹp
-    style User1 fill:#f9f,stroke:#333,stroke-width:2px
-    style User2 fill:#f9f,stroke:#333,stroke-width:2px
+    User((Authorized Gmail User)) --> Server[Gmail Server]
+    Server --> Listener[Email Listener]
+    Listener --> Verify{Sender Verification}
+    Verify --> Parser[Command Parser]
+    Parser --> Executor[Command Executor]
+    Executor --> Actions[Windows System Actions]
+    Actions --> Result[Result Generator]
+    Result --> Sender[Email Sender]
+    Sender --> User
+    
+    style User fill:#f9f,stroke:#333,stroke-width:2px
     style Verify fill:#fff4dd,stroke:#d4a017,stroke-width:2px
     style Actions fill:#e1f5fe,stroke:#01579b,stroke-width:2px
 
