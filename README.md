@@ -53,7 +53,9 @@ graph TD
     Actions --> Generator[Result Generator]
     Generator --> Sender[Email Sender]
     Sender --> User
-
+    
+    style User fill:#f9f,stroke:#333,stroke-width:2px
+    style Verify fill:#fff4dd,stroke:#d4a017,stroke-width:2px
 ---
 
 # 📦 Requirements
