@@ -43,21 +43,37 @@ This architecture allows **remote control without requiring a dedicated web serv
 
 # 🏗️ System Architecture
 Authorized Gmail Account
+
 │
+
 │ Send command
+
 ▼
+
 Gmail Server
+
 │
+
 │ Email retrieval
+
 ▼
+
 Remote Control Application
+
 │
+
 │ Execute command
+
 ▼
+
 Target Computer
+
 │
+
 │ Send result
+
 ▼
+
 Gmail Response
 
 ---
