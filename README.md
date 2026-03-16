@@ -44,59 +44,32 @@ This architecture allows **remote control without requiring a dedicated web serv
 # 🏗️ System Architecture
 
 Authorized Gmail User
-
         │
-        
         ▼
-        
    Gmail Server
-   
         │
-        
         ▼
-        
    Email Listener
-   
         │
-        
         ▼
-        
 Sender Verification
-
-        │
-        
-        ▼
-        
-   Command Parser
-   
-        │
-        
-        ▼
-        
-  Command Executor
-  
-        │
-        
-        ▼
-        
+        │      
+        ▼       
+   Command Parser   
+        │        
+        ▼        
+  Command Executor  
+        │        
+        ▼        
 Windows System Actions
-
-        │
-        
-        ▼
-        
-   Result Generator
-   
-        │
-        
-        ▼
-        
-    Email Sender
-    
-        │
-        
-        ▼
-        
+        │        
+        ▼        
+   Result Generator   
+        │        
+        ▼        
+    Email Sender   
+        │        
+        ▼        
 Authorized Gmail User
 
 ---
